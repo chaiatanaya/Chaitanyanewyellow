@@ -1,0 +1,47 @@
+.nav-link.selected {
+      font-weight: 400;
+      color: #1f2937; /* Tailwind's gray-900 */
+      transition: color 0.3s ease;
+    }
+    .nav-link {
+      font-weight: 300;
+      color: #9ca3af; /* Tailwind's gray-400 */
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #374151; /* Tailwind's gray-700 */
+      transition: color 0.3s ease;
+    }
+
+    /* Animate collapse menu */
+    .collapsing {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.35s ease;
+    }
+    .collapse.show {
+      transition: height 0.35s ease;
+    }
+
+    /* Smooth fade for toggler icon */
+    .navbar-toggler-icon {
+      transition: transform 0.3s ease;
+    }
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+      transform: rotate(0deg);
+    }
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+      transform: rotate(90deg);
+    }
+    .navbar-brand img {
+    transition: width 0.3s ease; /* Smooth resizing animation */
+  }
+ body {
+      font-family: 'Inter', sans-serif;
+    }
+  @media (max-width: 991.98px) { /* Matches Bootstrap's lg breakpoint */
+    .navbar-brand img {
+      width: 50px; /* Smaller width for mobile */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
